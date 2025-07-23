@@ -4,9 +4,9 @@
 
 theme = "blowfish" # 取消注释此行
 # baseURL = "https://your_domain.com/"
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh-cn"
 
-# pluralizeListTitles = "true" # hugo 函数，适用于非英语语言，详细信息请参见 https://gohugo.io/getting-started/configuration/#pluralizelisttitles
+pluralizeListTitles = true # hugo 函数，适用于非英语语言，详细信息请参见 https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
 summaryLength = 0
