@@ -1,0 +1,174 @@
+# -- 主题选项 --
+# 这些选项控制主题的功能，并允许您自定义网站的显示方式。
+#
+# 有关每个参数的详细信息，请参阅主题文档。
+# https://blowfish.page/docs/configuration/#theme-parameters
+colorScheme = "blowfish"
+defaultAppearance = "dark" # 有效选项: light 或 dark
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = true
+
+replyByEmail = false
+
+# mainSections = ["section1", "section2"]
+# robots = ""
+
+disableImageOptimization = false
+disableImageOptimizationMD = false
+disableTextInHeader = false
+# backgroundImageWidth = 1200
+
+defaultBackgroundImage = "img/background.svg"
+defaultFeaturedImage = "img/featured.svg"
+# defaultSocialImage = "img/android-chrome-512x512.png" # 用作社交媒体分享（Open Graph 和 Twitter）的默认图片
+
+# highlightCurrentMenuArea = true
+# smartTOC = true
+# smartTOCHideUnfocusedChildren = true
+
+fingerprintAlgorithm = "sha512" # 有效值为 "sha512"（默认）、"sha384"、"sha256"
+
+giteaDefaultServer = "https://git.fsfe.org"
+forgejoDefaultServer = "https://v11.next.forgejo.org"
+
+[header]
+  layout = "basic" # 有效选项: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "background" # 有效选项: page, profile, hero, card, background, custom
+  homepageImage = "img/background.svg" # 用于: hero 和 card
+  showRecent = false
+  showRecentItems = 6
+  showMoreLink = false
+  showMoreLinkDest = "/posts/"
+  cardView = true
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = true # 仅在 layout 为 background 时使用
+  disableHeroImageFilter = false # 仅在 layout 为 hero 时使用
+
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showDateOnlyInArticle = false
+  showDateUpdated = false
+  showAuthor = true
+  # showAuthorBottom = false
+  showHero = false
+  # heroStyle = "basic" # 有效选项: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # 仅在 heroStyle 为 background 或 thumbAndBackground 时使用
+  layoutBackgroundHeaderSpace = true # 仅在 heroStyle 为 background 时使用
+  showBreadcrumbs = false
+  showDraftLabel = true
+  showEdit = false
+  # editURL = "https://github.com/username/repo/"
+  editAppendPath = true
+  seriesOpened = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = false
+  # showRelatedContent = false
+  # relatedContentLimit = 3
+  showTaxonomies = false # 使用 showTaxonomies 或 showCategoryOnly，只能选一个
+  showCategoryOnly = false # 使用 showTaxonomies 或 showCategoryOnly，只能选一个
+  showAuthorsBadges = false
+  showWordCount = true
+  # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
+  showZenMode = false
+
+[list]
+  showHero = false
+  # heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # 仅在 heroStyle 为 background 或 thumbAndBackground 时使用
+  layoutBackgroundHeaderSpace = true # 仅在 heroStyle 为 background 时使用
+  showBreadcrumbs = false
+  showSummary = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  showCards = false
+  orderByWeight = false
+  groupByYear = true
+  cardView = false
+  cardViewScreenWidth = false
+  constrainItemsWidth = false
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  cardView = false
+
+[term]
+  showHero = false
+  heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = true
+  groupByYear = false
+  cardView = false
+  cardViewScreenWidth = false
+
+[firebase]
+  # apiKey = "XXXXXX"
+  # authDomain = "XXXXXX"
+  # projectId = "XXXXXX"
+  # storageBucket = "XXXXXX"
+  # messagingSenderId = "XXXXXX"
+  # appId = "XXXXXX"
+  # measurementId = "XXXXXX"
+
+[fathomAnalytics]
+  # site = "ABC12345"
+  # domain = "llama.yoursite.com"
+
+[umamiAnalytics]
+  # websiteid = "ABC12345"
+  # domain = "llama.yoursite.com"
+  # dataDomains = "yoursite.com,yoursite2.com"
+  # scriptName = ""
+  # enableTrackEvent = true
+
+[selineAnalytics]
+  # token = "XXXXXX"
+  # enableTrackEvent = true
+
+[buymeacoffee]
+  # identifier = ""
+  # globalWidget = true
+  # globalWidgetMessage = "Hello"
+  # globalWidgetColor = "#FFDD00"
+  # globalWidgetPosition = "Right"
+
+[verification]
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""
+  # fediverse = ""
+
+[rssnext]
+  # feedId = ""
+  # userId = ""
+
+[advertisement]
+  # adsense = ""
