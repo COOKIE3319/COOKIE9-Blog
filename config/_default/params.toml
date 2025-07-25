@@ -1,10 +1,11 @@
 # -- 主题选项 --
-# 这些选项控制主题的功能，并允许您自定义网站的显示方式。
+# 这些选项控制主题的功能，并允许你自定义网站的显示方式。
 #
-# 有关每个参数的详细信息，请参阅主题文档。
+# 有关每个参数的更多详细信息，请参阅主题文档。
 # https://blowfish.page/docs/configuration/#theme-parameters
+
 colorScheme = "blowfish"
-defaultAppearance = "dark" # 有效选项: light 或 dark
+defaultAppearance = "light" # 有效选项: light 或 dark
 autoSwitchAppearance = true
 
 enableSearch = true
@@ -12,7 +13,7 @@ enableCodeCopy = true
 
 replyByEmail = false
 
-# mainSections = ["section1", "section2"]
+mainSections = ["docs"]
 # robots = ""
 
 disableImageOptimization = false
@@ -20,21 +21,21 @@ disableImageOptimizationMD = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-defaultBackgroundImage = "img/background.svg"
-defaultFeaturedImage = "img/featured.svg"
-# defaultSocialImage = "img/android-chrome-512x512.png" # 用作社交媒体分享（Open Graph 和 Twitter）的默认图片
+defaultBackgroundImage = "/img/background.svg"
+defaultFeaturedImage = "/img/featured.svg"
+defaultSocialImage = "/img/blowfish_banner.png"
 
-# highlightCurrentMenuArea = true
-# smartTOC = true
-# smartTOCHideUnfocusedChildren = true
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = false
+
+#giteaDefaultServer = "https://git.fsfe.org"
+#forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 fingerprintAlgorithm = "sha512" # 有效值为 "sha512"（默认）、"sha384"、"sha256"
 
-giteaDefaultServer = "https://git.fsfe.org"
-forgejoDefaultServer = "https://v11.next.forgejo.org"
-
 [header]
-  layout = "basic" # 有效选项: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+  layout = "fixed" # 有效选项: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
 
 [footer]
   showMenu = true
@@ -44,19 +45,19 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showScrollToTop = true
 
 [homepage]
-  layout = "background" # 有效选项: page, profile, hero, card, background, custom
-  homepageImage = "img/background.svg" # 用于: hero 和 card
+  layout = "custom" # 有效选项: page, profile, hero, card, background, custom
+  # homepageImage = "/img/iceland.jpg" # 用于: hero 和 card
   showRecent = false
-  showRecentItems = 6
-  showMoreLink = false
-  showMoreLinkDest = "/posts/"
+  showRecentItems = 12
+  showMoreLink = true
+  showMoreLinkDest = "docs"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true # 仅在 layout 为 background 时使用
-  disableHeroImageFilter = false # 仅在 layout 为 hero 时使用
+  layoutBackgroundBlur = true # 仅在 layout 等于 background 时使用
+  disableHeroImageFilter = false # 仅在 layout 等于 hero 时使用
 
 [article]
-  showDate = true
+  showDate = false
   showViews = false
   showLikes = false
   showDateOnlyInArticle = false
@@ -64,78 +65,77 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showAuthor = true
   # showAuthorBottom = false
   showHero = false
-  # heroStyle = "basic" # 有效选项: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # 仅在 heroStyle 为 background 或 thumbAndBackground 时使用
-  layoutBackgroundHeaderSpace = true # 仅在 heroStyle 为 background 时使用
-  showBreadcrumbs = false
+  heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # 仅在 heroStyle 等于 background 时使用
+  layoutBackgroundHeaderSpace = true # 仅在 heroStyle 等于 background 时使用
+  showBreadcrumbs = true
   showDraftLabel = true
-  showEdit = false
-  # editURL = "https://github.com/username/repo/"
+  showEdit = true
+  editURL = "https://github.com/nunocoracao/blowfish/tree/main/exampleSite/content"
   editAppendPath = true
   seriesOpened = false
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = false
-  # showRelatedContent = false
-  # relatedContentLimit = 3
-  showTaxonomies = false # 使用 showTaxonomies 或 showCategoryOnly，只能选一个
-  showCategoryOnly = false # 使用 showTaxonomies 或 showCategoryOnly，只能选一个
-  showAuthorsBadges = false
-  showWordCount = true
-  # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
-  showZenMode = false
+  showTableOfContents = true
+  showRelatedContent = true
+  relatedContentLimit = 9
+  showTaxonomies = true 
+  showAuthorsBadges = true 
+  showWordCount = false
+  sharingLinks = [ "twitter", "telegram", "email"]
+  showZenMode = true
 
 [list]
-  showHero = false
-  # heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # 仅在 heroStyle 为 background 或 thumbAndBackground 时使用
-  layoutBackgroundHeaderSpace = true # 仅在 heroStyle 为 background 时使用
+  showHero = true
+  heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # 仅在 heroStyle 等于 background 时使用
+  layoutBackgroundHeaderSpace = false
   showBreadcrumbs = false
   showSummary = false
   showViews = false
   showLikes = false
-  showTableOfContents = false
-  showCards = false
-  orderByWeight = false
-  groupByYear = true
-  cardView = false
+  showTableOfContents = true
+  showCards = true
+  orderByWeight = true
+  groupByYear = false
+  cardView = true
   cardViewScreenWidth = false
   constrainItemsWidth = false
 
 [sitemap]
-  excludedKinds = ["taxonomy", "term"]
+  excludedKinds = []
 
 [taxonomy]
   showTermCount = true
-  showHero = false
+  showHero = true
   heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
   showLikes = false
-  showTableOfContents = false
+  showTableOfContents = true
   cardView = false
 
 [term]
-  showHero = false
+  showHero = true
   heroStyle = "background" # 有效选项: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false
   showLikes = false
   showTableOfContents = true
   groupByYear = false
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
-
+  
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  #apiKey = "AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
+  #authDomain = "blowfish-21fff.firebaseapp.com"
+  #projectId = "blowfish-21fff"
+  #storageBucket = "blowfish-21fff.appspot.com"
+  #messagingSenderId = "60108104191"
+  #appId = "1:60108104191:web:039842ebe1370698b487ca"
+  #measurementId = "G-PEDMYR1V0K"
 
 [fathomAnalytics]
   # site = "ABC12345"
@@ -146,25 +146,18 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # domain = "llama.yoursite.com"
   # dataDomains = "yoursite.com,yoursite2.com"
   # scriptName = ""
-  # enableTrackEvent = true
+  # enableTrackEvent = false
 
 [selineAnalytics]
   # token = "XXXXXX"
-  # enableTrackEvent = true
+  # enableTrackEvent = false
 
-[buymeacoffee]
-  # identifier = ""
-  # globalWidget = true
-  # globalWidgetMessage = "Hello"
-  # globalWidgetColor = "#FFDD00"
-  # globalWidgetPosition = "Right"
 
 [verification]
   # google = ""
   # bing = ""
   # pinterest = ""
   # yandex = ""
-  # fediverse = ""
 
 [rssnext]
   # feedId = ""

@@ -2,7 +2,7 @@ disabled = false
 languageCode = "zh-cn"
 languageName = "简体中文"
 weight = 1
-title = "COOKIE9‘s Blog"
+title = "COOKIE9的小站"
 
 [params]
   displayName = "简体中文"
@@ -11,7 +11,7 @@ title = "COOKIE9‘s Blog"
   # dateFormat = "2 January 2006"
   # logo = "img/cookie.jpeg"
   # secondaryLogo = "img/cookie.jpeg"
-  # description = "My awesome website"
+  description = "cookie的小破站"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
@@ -19,7 +19,7 @@ title = "COOKIE9‘s Blog"
   email = "cookie3319@icloud.com"
   image = "img/cookie.jpeg"
   imageQuality = 96
-  headline = "I'm only human"
+  headline = "7/6/2005 - She/Her - Computer&Biology"
   # bio = "teste11111111111111"
   links = [
     { email = "mailto:cookie3319@icloud.com" },
